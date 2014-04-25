@@ -10,9 +10,9 @@ angular.module('myApp', [
   'myApp.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/', {templateUrl: 'pages/home.html', controller: 'mainController'});
-  $routeProvider.when('/about', {templateUrl: 'pages/about.html', controller: 'aboutController'});
-  $routeProvider.when('/contact', {templateUrl: 'pages/contact.html', controller: 'contactController'});
-  $routeProvider.when('/view/:id', {templateUrl: 'pages/viewnews.html', controller: 'viewController'});
+  $routeProvider.when('/', {templateUrl: 'app/pages/home.html', controller: 'mainController'});
+  $routeProvider.when('/about', {templateUrl: 'app/pages/about.html', controller: 'aboutController'});
+  $routeProvider.when('/contact', {templateUrl: 'app/pages/contact.html', controller: 'contactController'});
+  $routeProvider.when('/view/:id', {templateUrl: 'app/pages/viewnews.html', controller: 'viewController'});
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
