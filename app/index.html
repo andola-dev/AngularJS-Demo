@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>Angular Demo App</title>
+  <!-- SCROLLS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+  <!-- SPELLS -->
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-route/angular-route.js"></script>
+
+
+</head>
+
+<!-- define angular controller -->
+<body >
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Angular Demo App</a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+        <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="main">
+  
+    <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <div ng-view></div>
+    
+  </div>
+  
+  <footer class="text-center">
+    <p>Angular Demo @ AndolaSoft 2014</p>
+  </footer>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+  
+</body>
+
+</html>

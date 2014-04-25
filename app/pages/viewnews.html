@@ -1,0 +1,40 @@
+<div class="jumbotron text-center">
+
+  
+<div class="container-fluid" >
+            <div class="row-fluid" style="float:right">
+                <span class="span3">
+                    <input class="input-block-level" style="line-height: 1.4;"  name="search.title" ng-model="search.title" type="text">
+                </span>&nbsp;
+                <button class="btn" ng-click="searchval()" type="button" style="background-color: #ddd;">Search</button>
+            </div>
+		
+<table class="table table-striped table-bordered"   style="font-size:13px;text-align: left;">
+</div>
+    <thead>
+      <tr><th colspan="5">View News</th></tr>
+    </thead>
+    <tbody 
+	
+      <tr >
+        <td></td>
+		<td><span ng-if="newsview.responseData.results.image.url" ><img src="{{newsview.responseData.results.image.url}}" style="height:65px"/></span><br>{{newsview.responseData.results.publisher}}</td>
+        <td>
+          <a href="{{ newsview.responseData.results.url }}" target="_blank">{{ newsview.responseData.results.titleNoFormatting }}</a>
+        </td>
+        <td>{{newsview.id}}</td>
+        <td> {{newsview.publishedDate}}</td>
+      </tr>
+	  <tr ng-repeat="related in newsview.responseData.results.relatedStories" >
+        <td></td>
+		<td colspan="2">{{related.publisher}}</td>
+        <td >
+          <a href="{{ new.url }}">{{ related.titleNoFormatting }}</a>
+        </td>
+        
+        <td> {{related.publishedDate}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>
