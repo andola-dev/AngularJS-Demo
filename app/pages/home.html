@@ -16,7 +16,7 @@
     </thead>
     <tbody ng-repeat="new in news.responseData.results">
       <tr >
-        <td>{{$index + 1}}<span  ng-click="getview(new)" >View</span></td>
+        <td>{{$index + 1}}</td>
 		<td><span  ng-if="new.image.url" ><img src="{{new.image.url}}" style="height:65px"/></span><br>{{new.publisher}}</td>
         <td>
           {{ new.titleNoFormatting }}

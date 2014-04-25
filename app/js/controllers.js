@@ -40,6 +40,6 @@ angular.module('myApp.controllers', [])
         $scope.message = 'Look! I am an about page.';
   })
   .controller('contactController', function($scope) {
-        $scope.message = 'Contact us! JK. This is just a demo.';
+        $scope.message = 'Contact us!  This is just a demo.';
    });
 
